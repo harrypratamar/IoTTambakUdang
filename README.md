@@ -11,9 +11,12 @@ kemudian ditampilkan dalam aplikasi Android.
 
 # Cara penggunaan :
 
-## Untuk NodeMCU
-1. Buat project pada Firebase
+## Konfigurasi Firebase
+1. Buat project pada Firebase dengan nama bebas
 2. Buat Realtime Database pada Firebase
 3. Ganti rules read dan write database menjadi true
-4. Salin kode database secret ke dalam program NodeMCU
-5. 
+4. Pada tampilan Realtime Database, salin alamat url database kebagian FIREBASE_HOST pada kode program NodeMCU tanpa https 
+   Misal url database https://blabla.firebaseio.com/ maka dituliskan menjadi blabla.firebaseio.com
+5. Klik Gerigi disebelah Project Overview kemudian klik Project Settings lalu Service Accounts. 
+   Salin kode database secret ke bagian FIREBASE_AUTH pada kode program NodeMCU
+6. 
