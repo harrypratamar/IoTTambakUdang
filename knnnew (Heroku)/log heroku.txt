@@ -1,0 +1,627 @@
+(base) PS C:\Users\Harry Pratama>
+(base) PS C:\Users\Harry Pratama> cd C:
+(base) PS C:\Users\Harry Pratama> cd Documents
+(base) PS C:\Users\Harry Pratama\Documents> ls
+
+
+    Directory: C:\Users\Harry Pratama\Documents
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          7/1/2020   7:54 AM                Arduino
+d-----         7/10/2020   4:09 PM                Case
+d-----         7/10/2020   3:36 PM                conto
+d-----          7/3/2020  11:40 AM                Custom Office Templates
+d-----         8/22/2020  10:00 AM                EAGLE
+d-----          7/7/2020  11:53 AM                first_flask_app
+d-----          7/8/2020  11:02 PM                knn
+d-----          7/9/2020   1:01 AM                knn1
+d-----         8/24/2020   8:18 AM                knnhpr
+d-----          7/8/2020  11:37 PM                knn_air
+d-----         7/30/2020   2:56 AM                Plagiarism Detector reports
+d-----          7/3/2020   4:37 PM                Python Scripts
+d-----         7/16/2020  10:58 PM                Qory
+d-----          8/2/2020   7:17 PM                Wondershare Filmora 9
+-a----          7/4/2020  12:40 PM             65 link.txt
+
+
+(base) PS C:\Users\Harry Pratama\Documents> mkdir knnnew
+
+
+    Directory: C:\Users\Harry Pratama\Documents
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         8/24/2020  10:18 AM                knnnew
+
+
+(base) PS C:\Users\Harry Pratama\Documents> cd knnnew
+(base) PS C:\Users\Harry Pratama\Documents\knnnew> virtualenv venv
+virtualenv : The term 'virtualenv' is not recognized as the name of a cmdlet,
+function, script file, or operable program. Check the spelling of the name, or if
+a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ virtualenv venv
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (virtualenv:String) [], CommandNotF
+   oundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+(base) PS C:\Users\Harry Pratama\Documents\knnnew> virtualenv venv
+created virtual environment CPython3.7.6.final.0-64 in 54985ms
+  creator CPython3Windows(dest=C:\Users\Harry Pratama\Documents\knnnew\venv, clear=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\Harry Pratama\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==20.1.1, setuptools==49.1.0, wheel==0.34.2
+  activators BashActivator,BatchActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator
+(base) PS C:\Users\Harry Pratama\Documents\knnnew> cd venv/Scripts
+(base) PS C:\Users\Harry Pratama\Documents\knnnew\venv\Scripts> .\activate
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew\venv\Scripts> cd ..
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew\venv> cd ..
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> pip install flask gunicorn jinja2 numpy pandas pyrebase4 scikit-learn
+Collecting flask
+  Using cached Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+Collecting gunicorn
+  Using cached gunicorn-20.0.4-py2.py3-none-any.whl (77 kB)
+Collecting jinja2
+  Using cached Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+Collecting numpy
+  Downloading numpy-1.19.1-cp37-cp37m-win_amd64.whl (12.9 MB)
+     |████████████████████████████████| 12.9 MB 15 kB/s
+Collecting pandas
+  Downloading pandas-1.1.1-cp37-cp37m-win_amd64.whl (9.4 MB)
+     |████████████████████████████████| 9.4 MB 43 kB/s
+Collecting pyrebase4
+  Using cached Pyrebase4-4.3.0-py3-none-any.whl (8.8 kB)
+Collecting scikit-learn
+  Downloading scikit_learn-0.23.2-cp37-cp37m-win_amd64.whl (6.8 MB)
+     |████████████████████████████████| 6.8 MB 39 kB/s
+Collecting itsdangerous>=0.24
+  Using cached itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Werkzeug>=0.15
+  Using cached Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+Collecting click>=5.1
+  Using cached click-7.1.2-py2.py3-none-any.whl (82 kB)
+Requirement already satisfied: setuptools>=3.0 in c:\users\harry pratama\documents\knnnew\venv\lib\site-packages (from gunicorn) (49.1.0)
+Collecting MarkupSafe>=0.23
+  Using cached MarkupSafe-1.1.1-cp37-cp37m-win_amd64.whl (16 kB)
+Collecting python-dateutil>=2.7.3
+  Using cached python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+Collecting pytz>=2017.2
+  Using cached pytz-2020.1-py2.py3-none-any.whl (510 kB)
+Processing c:\users\harry pratama\appdata\local\pip\cache\wheels\b9\9b\9c\a01be401658fea33b93a35d03921b0c638266821b264dc8662\gcloud-0.18.3-cp37-none-any.whl
+Collecting python-jwt==2.0.1
+  Using cached python_jwt-2.0.1-py2.py3-none-any.whl (8.8 kB)
+Collecting pycryptodome>=3.6.4
+  Using cached pycryptodome-3.9.8-cp37-cp37m-win_amd64.whl (14.1 MB)
+Collecting requests>=2.19.1
+  Using cached requests-2.24.0-py2.py3-none-any.whl (61 kB)
+Collecting requests-toolbelt>=0.7.1
+  Using cached requests_toolbelt-0.9.1-py2.py3-none-any.whl (54 kB)
+Collecting oauth2client==4.1.2
+  Using cached oauth2client-4.1.2-py2.py3-none-any.whl (99 kB)
+Collecting threadpoolctl>=2.0.0
+  Using cached threadpoolctl-2.1.0-py3-none-any.whl (12 kB)
+Collecting joblib>=0.11
+  Using cached joblib-0.16.0-py3-none-any.whl (300 kB)
+Collecting scipy>=0.19.1
+  Downloading scipy-1.5.2-cp37-cp37m-win_amd64.whl (31.2 MB)
+     |███████████████████████████████ | 30.1 MB 61 kB/s eta 0:00:19ERROR: Exception:
+Traceback (most recent call last):
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_vendor\urllib3\response.py", line 425, in _error_catcher
+    yield
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_vendor\urllib3\response.py", line 507, in read
+    data = self._fp.read(amt) if not fp_closed else b""
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_vendor\cachecontrol\filewrapper.py", line 62, in read
+    data = self.__fp.read(amt)
+  File "c:\programdata\anaconda3\lib\http\client.py", line 457, in read
+    n = self.readinto(b)
+  File "c:\programdata\anaconda3\lib\http\client.py", line 501, in readinto
+    n = self.fp.readinto(b)
+  File "c:\programdata\anaconda3\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "c:\programdata\anaconda3\lib\ssl.py", line 1071, in recv_into
+    return self.read(nbytes, buffer)
+  File "c:\programdata\anaconda3\lib\ssl.py", line 929, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\cli\base_command.py", line 188, in _main
+    status = self.run(options, args)
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\cli\req_command.py", line 185, in wrapper
+    return func(self, options, args)
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\commands\install.py", line 333, in run
+    reqs, check_supported_wheels=not options.target_dir
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\resolution\legacy\resolver.py", line 179, in resolve
+    discovered_reqs.extend(self._resolve_one(requirement_set, req))
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\resolution\legacy\resolver.py", line 362, in _resolve_one
+    abstract_dist = self._get_abstract_dist_for(req_to_install)
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\resolution\legacy\resolver.py", line 314, in _get_abstract_dist_for
+    abstract_dist = self.preparer.prepare_linked_requirement(req)
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\operations\prepare.py", line 469, in prepare_linked_requirement
+    hashes=hashes,
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\operations\prepare.py", line 259, in unpack_url
+    hashes=hashes,
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\operations\prepare.py", line 130, in get_http_url
+    link, downloader, temp_dir.path, hashes
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\operations\prepare.py", line 281, in _download_http_url
+    for chunk in download.chunks:
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\cli\progress_bars.py", line 166, in iter
+    for x in it:
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\network\utils.py", line 39, in response_chunks
+    decode_content=False,
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_vendor\urllib3\response.py", line 564, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_vendor\urllib3\response.py", line 529, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "c:\programdata\anaconda3\lib\contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_vendor\urllib3\response.py", line 430, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.")
+pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='files.pythonhosted.org', port=443): Read timed out.
+WARNING: You are using pip version 20.1.1; however, version 20.2.2 is available.
+You should consider upgrading via the 'C:\Users\Harry Pratama\Documents\knnnew\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> pip install flask gunicorn jinja2 numpy pandas pyrebase4 scikit-learn
+Collecting flask
+  Using cached Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+Collecting gunicorn
+  Using cached gunicorn-20.0.4-py2.py3-none-any.whl (77 kB)
+Collecting jinja2
+  Using cached Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+Collecting numpy
+  Using cached numpy-1.19.1-cp37-cp37m-win_amd64.whl (12.9 MB)
+Collecting pandas
+  Using cached pandas-1.1.1-cp37-cp37m-win_amd64.whl (9.4 MB)
+Collecting pyrebase4
+  Using cached Pyrebase4-4.3.0-py3-none-any.whl (8.8 kB)
+Collecting scikit-learn
+  Using cached scikit_learn-0.23.2-cp37-cp37m-win_amd64.whl (6.8 MB)
+Collecting Werkzeug>=0.15
+  Using cached Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+Collecting itsdangerous>=0.24
+  Using cached itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting click>=5.1
+  Using cached click-7.1.2-py2.py3-none-any.whl (82 kB)
+Requirement already satisfied: setuptools>=3.0 in c:\users\harry pratama\documents\knnnew\venv\lib\site-packages (from gunicorn) (49.1.0)
+Collecting MarkupSafe>=0.23
+  Using cached MarkupSafe-1.1.1-cp37-cp37m-win_amd64.whl (16 kB)
+Collecting pytz>=2017.2
+  Using cached pytz-2020.1-py2.py3-none-any.whl (510 kB)
+Collecting python-dateutil>=2.7.3
+  Using cached python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+Collecting oauth2client==4.1.2
+  Using cached oauth2client-4.1.2-py2.py3-none-any.whl (99 kB)
+Collecting requests-toolbelt>=0.7.1
+  Using cached requests_toolbelt-0.9.1-py2.py3-none-any.whl (54 kB)
+Processing c:\users\harry pratama\appdata\local\pip\cache\wheels\b9\9b\9c\a01be401658fea33b93a35d03921b0c638266821b264dc8662\gcloud-0.18.3-cp37-none-any.whl
+Collecting requests>=2.19.1
+  Using cached requests-2.24.0-py2.py3-none-any.whl (61 kB)
+Collecting pycryptodome>=3.6.4
+  Using cached pycryptodome-3.9.8-cp37-cp37m-win_amd64.whl (14.1 MB)
+Collecting python-jwt==2.0.1
+  Using cached python_jwt-2.0.1-py2.py3-none-any.whl (8.8 kB)
+Collecting joblib>=0.11
+  Using cached joblib-0.16.0-py3-none-any.whl (300 kB)
+Collecting threadpoolctl>=2.0.0
+  Using cached threadpoolctl-2.1.0-py3-none-any.whl (12 kB)
+Collecting scipy>=0.19.1
+  Downloading scipy-1.5.2-cp37-cp37m-win_amd64.whl (31.2 MB)
+     |█████████████████████████████   | 28.4 MB 26 kB/s eta 0:01:44ERROR: Exception:
+Traceback (most recent call last):
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_vendor\urllib3\response.py", line 425, in _error_catcher
+    yield
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_vendor\urllib3\response.py", line 507, in read
+    data = self._fp.read(amt) if not fp_closed else b""
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_vendor\cachecontrol\filewrapper.py", line 62, in read
+    data = self.__fp.read(amt)
+  File "c:\programdata\anaconda3\lib\http\client.py", line 457, in read
+    n = self.readinto(b)
+  File "c:\programdata\anaconda3\lib\http\client.py", line 501, in readinto
+    n = self.fp.readinto(b)
+  File "c:\programdata\anaconda3\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "c:\programdata\anaconda3\lib\ssl.py", line 1071, in recv_into
+    return self.read(nbytes, buffer)
+  File "c:\programdata\anaconda3\lib\ssl.py", line 929, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\cli\base_command.py", line 188, in _main
+    status = self.run(options, args)
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\cli\req_command.py", line 185, in wrapper
+    return func(self, options, args)
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\commands\install.py", line 333, in run
+    reqs, check_supported_wheels=not options.target_dir
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\resolution\legacy\resolver.py", line 179, in resolve
+    discovered_reqs.extend(self._resolve_one(requirement_set, req))
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\resolution\legacy\resolver.py", line 362, in _resolve_one
+    abstract_dist = self._get_abstract_dist_for(req_to_install)
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\resolution\legacy\resolver.py", line 314, in _get_abstract_dist_for
+    abstract_dist = self.preparer.prepare_linked_requirement(req)
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\operations\prepare.py", line 469, in prepare_linked_requirement
+    hashes=hashes,
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\operations\prepare.py", line 259, in unpack_url
+    hashes=hashes,
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\operations\prepare.py", line 130, in get_http_url
+    link, downloader, temp_dir.path, hashes
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\operations\prepare.py", line 281, in _download_http_url
+    for chunk in download.chunks:
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\cli\progress_bars.py", line 166, in iter
+    for x in it:
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_internal\network\utils.py", line 39, in response_chunks
+    decode_content=False,
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_vendor\urllib3\response.py", line 564, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_vendor\urllib3\response.py", line 529, in read
+    raise IncompleteRead(self._fp_bytes_read, self.length_remaining)
+  File "c:\programdata\anaconda3\lib\contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\Users\Harry Pratama\Documents\knnnew\venv\lib\site-packages\pip\_vendor\urllib3\response.py", line 430, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.")
+pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='files.pythonhosted.org', port=443): Read timed out.
+WARNING: You are using pip version 20.1.1; however, version 20.2.2 is available.
+You should consider upgrading via the 'C:\Users\Harry Pratama\Documents\knnnew\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> pip install scikit-learn Collecting scikit-learn
+  Using cached scikit_learn-0.23.2-cp37-cp37m-win_amd64.whl (6.8 MB)
+Collecting joblib>=0.11
+  Using cached joblib-0.16.0-py3-none-any.whl (300 kB)
+Collecting threadpoolctl>=2.0.0
+  Using cached threadpoolctl-2.1.0-py3-none-any.whl (12 kB)
+Collecting numpy>=1.13.3
+  Using cached numpy-1.19.1-cp37-cp37m-win_amd64.whl (12.9 MB)
+Collecting scipy>=0.19.1
+  Downloading scipy-1.5.2-cp37-cp37m-win_amd64.whl (31.2 MB)
+     |████████████████████████████████| 31.2 MB 273 kB/s
+Installing collected packages: joblib, threadpoolctl, numpy, scipy, scikit-learn
+Successfully installed joblib-0.16.0 numpy-1.19.1 scikit-learn-0.23.2 scipy-1.5.2 threadpoolctl-2.1.0
+WARNING: You are using pip version 20.1.1; however, version 20.2.2 is available.
+You should consider upgrading via the 'C:\Users\Harry Pratama\Documents\knnnew\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> pip install flask gunicorn jinja2 numpy pandas pyrebase4 scikit-learn
+Collecting flask
+  Using cached Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+Collecting gunicorn
+  Using cached gunicorn-20.0.4-py2.py3-none-any.whl (77 kB)
+Collecting jinja2
+  Using cached Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+Requirement already satisfied: numpy in c:\users\harry pratama\documents\knnnew\venv\lib\site-packages (1.19.1)
+Collecting pandas
+  Using cached pandas-1.1.1-cp37-cp37m-win_amd64.whl (9.4 MB)
+Collecting pyrebase4
+  Using cached Pyrebase4-4.3.0-py3-none-any.whl (8.8 kB)
+Requirement already satisfied: scikit-learn in c:\users\harry pratama\documents\knnnew\venv\lib\site-packages (0.23.2)
+Collecting Werkzeug>=0.15
+  Using cached Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+Collecting click>=5.1
+  Using cached click-7.1.2-py2.py3-none-any.whl (82 kB)
+Collecting itsdangerous>=0.24
+  Using cached itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Requirement already satisfied: setuptools>=3.0 in c:\users\harry pratama\documents\knnnew\venv\lib\site-packages (from gunicorn) (49.1.0)
+Collecting MarkupSafe>=0.23
+  Using cached MarkupSafe-1.1.1-cp37-cp37m-win_amd64.whl (16 kB)
+Collecting python-dateutil>=2.7.3
+  Using cached python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+Collecting pytz>=2017.2
+  Using cached pytz-2020.1-py2.py3-none-any.whl (510 kB)
+Collecting requests-toolbelt>=0.7.1
+  Using cached requests_toolbelt-0.9.1-py2.py3-none-any.whl (54 kB)
+Collecting oauth2client==4.1.2
+  Using cached oauth2client-4.1.2-py2.py3-none-any.whl (99 kB)
+Collecting pycryptodome>=3.6.4
+  Using cached pycryptodome-3.9.8-cp37-cp37m-win_amd64.whl (14.1 MB)
+Collecting requests>=2.19.1
+  Using cached requests-2.24.0-py2.py3-none-any.whl (61 kB)
+Collecting python-jwt==2.0.1
+  Using cached python_jwt-2.0.1-py2.py3-none-any.whl (8.8 kB)
+Processing c:\users\harry pratama\appdata\local\pip\cache\wheels\b9\9b\9c\a01be401658fea33b93a35d03921b0c638266821b264dc8662\gcloud-0.18.3-cp37-none-any.whl
+Requirement already satisfied: scipy>=0.19.1 in c:\users\harry pratama\documents\knnnew\venv\lib\site-packages (from scikit-learn) (1.5.2)
+Requirement already satisfied: joblib>=0.11 in c:\users\harry pratama\documents\knnnew\venv\lib\site-packages (from scikit-learn) (0.16.0)
+Requirement already satisfied: threadpoolctl>=2.0.0 in c:\users\harry pratama\documents\knnnew\venv\lib\site-packages (from scikit-learn) (2.1.0)
+Collecting six>=1.5
+  Using cached six-1.15.0-py2.py3-none-any.whl (10 kB)
+Collecting pyasn1>=0.1.7
+  Using cached pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+Collecting httplib2>=0.9.1
+  Using cached httplib2-0.18.1-py3-none-any.whl (95 kB)
+Collecting pyasn1-modules>=0.0.5
+  Using cached pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+Collecting rsa>=3.1.4
+  Using cached rsa-4.6-py3-none-any.whl (47 kB)
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1
+  Downloading urllib3-1.25.10-py2.py3-none-any.whl (127 kB)
+     |████████████████████████████████| 127 kB 40 kB/s
+Collecting idna<3,>=2.5
+  Using cached idna-2.10-py2.py3-none-any.whl (58 kB)
+Collecting chardet<4,>=3.0.2
+  Using cached chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2020.6.20-py2.py3-none-any.whl (156 kB)
+Processing c:\users\harry pratama\appdata\local\pip\cache\wheels\42\66\97\11aed97607cb2379c1d35d02bdc159bcc3918eb0cc20f7eb9a\jws-0.1.3-cp37-none-any.whl
+Collecting googleapis-common-protos
+  Using cached googleapis_common_protos-1.52.0-py2.py3-none-any.whl (100 kB)
+Collecting protobuf!=3.0.0.b2.post1,>=3.0.0b2
+  Downloading protobuf-3.13.0-cp37-cp37m-win_amd64.whl (1.0 MB)
+     |████████████████████████████████| 1.0 MB 79 kB/s
+Installing collected packages: Werkzeug, click, itsdangerous, MarkupSafe, jinja2, flask, gunicorn, six, python-dateutil, pytz, pandas, urllib3, idna, chardet, certifi, requests, requests-toolbelt, pyasn1, httplib2, pyasn1-modules, rsa, oauth2client, pycryptodome, jws, python-jwt, protobuf, googleapis-common-protos, gcloud, pyrebase4
+Successfully installed MarkupSafe-1.1.1 Werkzeug-1.0.1 certifi-2020.6.20 chardet-3.0.4 click-7.1.2 flask-1.1.2 gcloud-0.18.3 googleapis-common-protos-1.52.0 gunicorn-20.0.4 httplib2-0.18.1 idna-2.10 itsdangerous-1.1.0 jinja2-2.11.2 jws-0.1.3 oauth2client-4.1.2 pandas-1.1.1 protobuf-3.13.0 pyasn1-0.4.8 pyasn1-modules-0.2.8 pycryptodome-3.9.8 pyrebase4-4.3.0 python-dateutil-2.8.1 python-jwt-2.0.1 pytz-2020.1 requests-2.24.0 requests-toolbelt-0.9.1 rsa-4.6 six-1.15.0 urllib3-1.25.10
+WARNING: You are using pip version 20.1.1; however, version 20.2.2 is available.
+You should consider upgrading via the 'C:\Users\Harry Pratama\Documents\knnnew\venv\Scripts\python.exe -m pip install --upgrade pip' command.
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> pip freeze > requirements.txt
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> new-item .gitignore
+
+
+    Directory: C:\Users\Harry Pratama\Documents\knnnew
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         8/24/2020  11:58 AM              0 .gitignore
+
+
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> git init
+Initialized empty Git repository in C:/Users/Harry Pratama/Documents/knnnew/.git/
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> git add --all
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> git commit -m "revisi"   [master (root-commit) c82a749] revisi
+ 6 files changed, 551 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Procfile
+ create mode 100644 app.py
+ create mode 100644 dataset.csv
+ create mode 100644 dataset_s.csv
+ create mode 100644 requirements.txt
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> heroku login
+(node:5208) SyntaxError Plugin: heroku: C:\Users\Harry Pratama\AppData\Local\heroku\config.json: Unexpected string in JSON at position 72
+module: @oclif/config@1.13.2
+task: runHook prerun
+plugin: heroku
+root: C:\Program Files\heroku\client
+See more details with DEBUG=*
+heroku: Press any key to open up the browser to login or q to exit:
+Opening browser to https://cli-auth.heroku.com/auth/cli/browser/7f3e676e-cd42-41d1-b7c1-668d16326da6?requestor=SFMyNTY.g3QAAAACZAAEZGF0YW0AAAAPMTgwLjI0Ni4yMTYuMTAwZAAGc2lnbmVkbgYAWt3VHnQB.RjbWsKDo3mK2JTOqfb-ps8NXGokWxRpQx7qx3nzKqYA
+Logging in... done
+Logged in as harypratama439@gmail.com
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> heroku create knnnew
+Creating ⬢ knnnew... -
+(node:2432) SyntaxError Plugin: heroku: C:\Users\Harry Pratama\AppData\Local\heroku\config.json: Unexpected string in JSON at position 72
+module: @oclif/config@1.13.2
+task: runHook prerun
+plugin: heroku
+root: C:\Program Files\heroku\client
+Creating ⬢ knnnew... done
+https://knnnew.herokuapp.com/ | https://git.heroku.com/knnnew.git
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> git remote -v
+heroku  https://git.heroku.com/knnnew.git (fetch)
+heroku  https://git.heroku.com/knnnew.git (push)
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> git push heroku master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 9.04 KiB | 1.29 MiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Python app detected
+remote: -----> Installing python-3.6.12
+remote: -----> Installing pip 20.1.1, setuptools 47.1.1 and wheel 0.34.2
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote:        Collecting certifi==2020.6.20
+remote:          Downloading certifi-2020.6.20-py2.py3-none-any.whl (156 kB)
+remote:        Collecting chardet==3.0.4
+remote:          Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+remote:        Collecting click==7.1.2
+remote:          Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+remote:        Collecting Flask==1.1.2
+remote:          Downloading Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+remote:        Collecting gcloud==0.18.3
+remote:          Downloading gcloud-0.18.3.tar.gz (454 kB)
+remote:        Collecting googleapis-common-protos==1.52.0
+remote:          Downloading googleapis_common_protos-1.52.0-py2.py3-none-any.whl (100 kB)
+remote:        Collecting gunicorn==20.0.4
+remote:          Downloading gunicorn-20.0.4-py2.py3-none-any.whl (77 kB)
+remote:        Collecting httplib2==0.18.1
+remote:          Downloading httplib2-0.18.1-py3-none-any.whl (95 kB)
+remote:        Collecting idna==2.10
+remote:          Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
+remote:        Collecting itsdangerous==1.1.0
+remote:          Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+remote:        Collecting Jinja2==2.11.2
+remote:          Downloading Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+remote:        Collecting joblib==0.16.0
+remote:          Downloading joblib-0.16.0-py3-none-any.whl (300 kB)
+remote:        Collecting jws==0.1.3
+remote:          Downloading jws-0.1.3.tar.gz (8.1 kB)
+remote:        Collecting MarkupSafe==1.1.1
+remote:          Downloading MarkupSafe-1.1.1-cp36-cp36m-manylinux1_x86_64.whl (27 kB)
+remote:        Collecting numpy==1.19.1
+remote:          Downloading numpy-1.19.1-cp36-cp36m-manylinux2010_x86_64.whl (14.5 MB)
+remote:        Collecting oauth2client==4.1.2
+remote:          Downloading oauth2client-4.1.2-py2.py3-none-any.whl (99 kB)
+remote:        Collecting pandas==1.1.1
+remote:          Downloading pandas-1.1.1-cp36-cp36m-manylinux1_x86_64.whl (10.5 MB)
+remote:        Collecting protobuf==3.13.0
+remote:          Downloading protobuf-3.13.0-cp36-cp36m-manylinux1_x86_64.whl (1.3 MB)
+remote:        Collecting pyasn1==0.4.8
+remote:          Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+remote:        Collecting pyasn1-modules==0.2.8
+remote:          Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+remote:        Collecting pycryptodome==3.9.8
+remote:          Downloading pycryptodome-3.9.8-cp36-cp36m-manylinux1_x86_64.whl (13.7 MB)
+remote:        Collecting Pyrebase4==4.3.0
+remote:          Downloading Pyrebase4-4.3.0-py3-none-any.whl (8.8 kB)
+remote:        Collecting python-dateutil==2.8.1
+remote:          Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+remote:        Collecting python-jwt==2.0.1
+remote:          Downloading python_jwt-2.0.1-py2.py3-none-any.whl (8.8 kB)
+remote:        Collecting pytz==2020.1
+remote:          Downloading pytz-2020.1-py2.py3-none-any.whl (510 kB)
+remote:        Collecting requests==2.24.0
+remote:          Downloading requests-2.24.0-py2.py3-none-any.whl (61 kB)
+remote:        Collecting requests-toolbelt==0.9.1
+remote:          Downloading requests_toolbelt-0.9.1-py2.py3-none-any.whl (54 kB)
+remote:        Collecting rsa==4.6
+remote:          Downloading rsa-4.6-py3-none-any.whl (47 kB)
+remote:        Collecting scikit-learn==0.23.2
+remote:          Downloading scikit_learn-0.23.2-cp36-cp36m-manylinux1_x86_64.whl (6.8 MB)
+remote:        Collecting scipy==1.5.2
+remote:          Downloading scipy-1.5.2-cp36-cp36m-manylinux1_x86_64.whl (25.9 MB)
+remote:        Collecting six==1.15.0
+remote:          Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+remote:        Collecting threadpoolctl==2.1.0
+remote:          Downloading threadpoolctl-2.1.0-py3-none-any.whl (12 kB)
+remote:        Collecting urllib3==1.25.10
+remote:          Downloading urllib3-1.25.10-py2.py3-none-any.whl (127 kB)
+remote:        Collecting Werkzeug==1.0.1
+remote:          Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+remote:        Building wheels for collected packages: gcloud, jws
+remote:          Building wheel for gcloud (setup.py): started
+remote:          Building wheel for gcloud (setup.py): finished with status 'done'
+remote:          Created wheel for gcloud: filename=gcloud-0.18.3-py3-none-any.whl size=602936 sha256=8b89b9cc2def2398851be2af151f08a845dac0d7893c192e84c84e68431bf93f
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-r4gcbumx/wheels/51/6a/a3/fb437224d1be695ae7634d616c8bd064cc2bc0ce88ecb3e372
+remote:          Building wheel for jws (setup.py): started
+remote:          Building wheel for jws (setup.py): finished with status 'done'
+remote:          Created wheel for jws: filename=jws-0.1.3-py3-none-any.whl size=9409 sha256=6ce2c923557c4a9fa33eba9a760997159bca75d8e386cd34eb14e772eb648a81
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-r4gcbumx/wheels/42/ed/b9/dead68137800af37e8750e15e46966317c90a45840be9b914c
+remote:        Successfully built gcloud jws
+remote:        Installing collected packages: certifi, chardet, click, MarkupSafe, Jinja2, itsdangerous, Werkzeug, Flask, httplib2, six, protobuf, googleapis-common-protos, pyasn1, pyasn1-modules, rsa, oauth2client, gcloud, gunicorn, idna, joblib, jws, numpy, python-dateutil, pytz, pandas, pycryptodome, urllib3, requests, requests-toolbelt, python-jwt, Pyrebase4, threadpoolctl, scipy, scikit-learn
+remote:        Successfully installed Flask-1.1.2 Jinja2-2.11.2 MarkupSafe-1.1.1 Pyrebase4-4.3.0 Werkzeug-1.0.1 certifi-2020.6.20 chardet-3.0.4 click-7.1.2 gcloud-0.18.3 googleapis-common-protos-1.52.0 gunicorn-20.0.4 httplib2-0.18.1 idna-2.10 itsdangerous-1.1.0 joblib-0.16.0 jws-0.1.3 numpy-1.19.1 oauth2client-4.1.2 pandas-1.1.1 protobuf-3.13.0 pyasn1-0.4.8 pyasn1-modules-0.2.8 pycryptodome-3.9.8 python-dateutil-2.8.1 python-jwt-2.0.1 pytz-2020.1 requests-2.24.0 requests-toolbelt-0.9.1 rsa-4.6 scikit-learn-0.23.2 scipy-1.5.2 six-1.15.0 threadpoolctl-2.1.0 urllib3-1.25.10
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 129.8M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://knnnew.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/knnnew.git
+Logging in... done
+Logged in as harypratama439@gmail.com
+Creating ⬢ knnnew... -
+(node:5540) SyntaxError Plugin: heroku: C:\Users\Harry Pratama\AppData\Local\heroku\config.json: Unexpected string in JSON at position 72ame, or if a path was
+module: @oclif/config@1.13.2th is correct and try again.> git commit -m "revisi"
+task: runHook prerunisi
+plugin: herokud, 321 insertions(+), 19 deletions(-)
+root: C:\Program Files\heroku\client
+Creating ⬢ knnnew... done
+https://knnnew.herokuapp.com/ | https://git.heroku.com/knnnew.git
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> git remote -v
+heroku  https://git.heroku.com/knnnew.git (fetch)
+heroku  https://git.heroku.com/knnnew.git (push)s\knnnew> heroku create knnnew
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew> git push heroku master
+Enumerating objects: 11, done.client
+Counting objects: 100% (11/11), done.
+Delta compression using up to 2 threadsowser to login or q to exit:
+Compressing objects: 100% (9/9), done.roku.com/auth/cli/browser/bad77523-45ba-4d7f-
+Writing objects: 100% (11/11), 10.62 KiB | 1.18 MiB/s, done.MTgwLjI0Ni4yMTYuMTAwZAA
+Total 11 (delta 2), reused 0 (delta 0), pack-reused 0IWEOwU02vC3o
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Python app detected
+remote: -----> Installing python-3.6.12
+remote: -----> Installing pip 20.1.1, setuptools 47.1.1 and wheel 0.34.2
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote:        Collecting certifi==2020.6.20
+remote:          Downloading certifi-2020.6.20-py2.py3-none-any.whl (156 kB)
+remote:        Collecting chardet==3.0.4
+remote:          Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+remote:        Collecting click==7.1.2
+remote:          Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+remote:        Collecting Flask==1.1.2
+remote:          Downloading Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+remote:        Collecting gcloud==0.18.3
+remote:          Downloading gcloud-0.18.3.tar.gz (454 kB)
+remote:        Collecting googleapis-common-protos==1.52.0
+remote:          Downloading googleapis_common_protos-1.52.0-py2.py3-none-any.whl (100 kB)
+remote:        Collecting gunicorn==20.0.4
+remote:          Downloading gunicorn-20.0.4-py2.py3-none-any.whl (77 kB)
+remote:        Collecting httplib2==0.18.1
+remote:          Downloading httplib2-0.18.1-py3-none-any.whl (95 kB)
+remote:        Collecting idna==2.10
+remote:          Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
+remote:        Collecting itsdangerous==1.1.0
+remote:          Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+remote:        Collecting Jinja2==2.11.2
+remote:          Downloading Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+remote:        Collecting joblib==0.16.0
+remote:          Downloading joblib-0.16.0-py3-none-any.whl (300 kB)
+remote:        Collecting jws==0.1.3
+remote:          Downloading jws-0.1.3.tar.gz (8.1 kB)
+remote:        Collecting MarkupSafe==1.1.1
+remote:          Downloading MarkupSafe-1.1.1-cp36-cp36m-manylinux1_x86_64.whl (27 kB)
+remote:        Collecting numpy==1.19.1
+remote:          Downloading numpy-1.19.1-cp36-cp36m-manylinux2010_x86_64.whl (14.5 MB)
+remote:        Collecting oauth2client==4.1.2
+remote:          Downloading oauth2client-4.1.2-py2.py3-none-any.whl (99 kB)
+remote:        Collecting pandas==1.1.1
+remote:          Downloading pandas-1.1.1-cp36-cp36m-manylinux1_x86_64.whl (10.5 MB)
+remote:        Collecting protobuf==3.13.0
+remote:          Downloading protobuf-3.13.0-cp36-cp36m-manylinux1_x86_64.whl (1.3 MB)
+remote:        Collecting pyasn1==0.4.8
+remote:          Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+remote:        Collecting pyasn1-modules==0.2.8
+remote:          Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+remote:        Collecting pycryptodome==3.9.8
+remote:          Downloading pycryptodome-3.9.8-cp36-cp36m-manylinux1_x86_64.whl (13.7 MB)
+remote:        Collecting Pyrebase4==4.3.0
+remote:          Downloading Pyrebase4-4.3.0-py3-none-any.whl (8.8 kB)
+remote:        Collecting python-dateutil==2.8.1
+remote:          Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+remote:        Collecting python-jwt==2.0.1
+remote:          Downloading python_jwt-2.0.1-py2.py3-none-any.whl (8.8 kB)
+remote:        Collecting pytz==2020.1
+remote:          Downloading pytz-2020.1-py2.py3-none-any.whl (510 kB)
+remote:        Collecting requests==2.24.0
+remote:          Downloading requests-2.24.0-py2.py3-none-any.whl (61 kB)
+remote:        Collecting requests-toolbelt==0.9.1
+remote:          Downloading requests_toolbelt-0.9.1-py2.py3-none-any.whl (54 kB)
+remote:        Collecting rsa==4.6
+remote:          Downloading rsa-4.6-py3-none-any.whl (47 kB)
+remote:        Collecting scikit-learn==0.23.2
+remote:          Downloading scikit_learn-0.23.2-cp36-cp36m-manylinux1_x86_64.whl (6.8 MB)
+remote:        Collecting scipy==1.5.2
+remote:          Downloading scipy-1.5.2-cp36-cp36m-manylinux1_x86_64.whl (25.9 MB)
+remote:        Collecting six==1.15.0
+remote:          Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+remote:        Collecting threadpoolctl==2.1.0
+remote:          Downloading threadpoolctl-2.1.0-py3-none-any.whl (12 kB)
+remote:        Collecting urllib3==1.25.10
+remote:          Downloading urllib3-1.25.10-py2.py3-none-any.whl (127 kB)
+remote:        Collecting Werkzeug==1.0.1
+remote:          Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+remote:        Building wheels for collected packages: gcloud, jws
+remote:          Building wheel for gcloud (setup.py): started
+remote:          Building wheel for gcloud (setup.py): finished with status 'done'
+remote:          Created wheel for gcloud: filename=gcloud-0.18.3-py3-none-any.whl size=602936 sha256=bab97439815cc7feeabc6b05fe4b1823a38d1bbb1503836184e29404eebfb0cd
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-lcs97dhw/wheels/51/6a/a3/fb437224d1be695ae7634d616c8bd064cc2bc0ce88ecb3e372
+remote:          Building wheel for jws (setup.py): started
+remote:          Building wheel for jws (setup.py): finished with status 'done'
+remote:          Created wheel for jws: filename=jws-0.1.3-py3-none-any.whl size=9409 sha256=d5dea5dd8fd303d698d0c147826b2a67af664f6d789d5efb37aea19872aab586
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-lcs97dhw/wheels/42/ed/b9/dead68137800af37e8750e15e46966317c90a45840be9b914c
+remote:        Successfully built gcloud jws
+remote:        Installing collected packages: certifi, chardet, click, MarkupSafe, Jinja2, itsdangerous, Werkzeug, Flask, httplib2, six, protobuf, googleapis-common-protos, pyasn1, pyasn1-modules, rsa, oauth2client, gcloud, gunicorn, idna, joblib, jws, numpy, python-dateutil, pytz, pandas, pycryptodome, urllib3, requests, requests-toolbelt, python-jwt, Pyrebase4, scipy, threadpoolctl, scikit-learn
+remote:        Successfully installed Flask-1.1.2 Jinja2-2.11.2 MarkupSafe-1.1.1 Pyrebase4-4.3.0 Werkzeug-1.0.1 certifi-2020.6.20 chardet-3.0.4 click-7.1.2 gcloud-0.18.3 googleapis-common-protos-1.52.0 gunicorn-20.0.4 httplib2-0.18.1 idna-2.10 itsdangerous-1.1.0 joblib-0.16.0 jws-0.1.3 numpy-1.19.1 oauth2client-4.1.2 pandas-1.1.1 protobuf-3.13.0 pyasn1-0.4.8 pyasn1-modules-0.2.8 pycryptodome-3.9.8 python-dateutil-2.8.1 python-jwt-2.0.1 pytz-2020.1 requests-2.24.0 requests-toolbelt-0.9.1 rsa-4.6 scikit-learn-0.23.2 scipy-1.5.2 six-1.15.0 threadpoolctl-2.1.0 urllib3-1.25.10
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 129.8M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://knnnew.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/knnnew.git
+ * [new branch]      master -> master
+(base) (venv) PS C:\Users\Harry Pratama\Documents\knnnew>
