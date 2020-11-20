@@ -31,8 +31,8 @@ kemudian ditampilkan dalam aplikasi Android.
 5. Sambungkan sensor ke pin Arduino (Untuk PIN dari kode Program Sensor LDR dihubungkan ke pin A0, Sensor DHT ke pin D3 dan Sensor Suhu Air Dallas DS18B20 ke pin D2) Untuk referensi pin NodeMCU dapat dilihat pada link berikut ini https://components101.com/development-boards/nodemcu-esp8266-pinout-features-and-datasheet
 6. Lakukan upload kode program ke NodeMCU, tunggu sampai selesai. Apabila berhasil maka data sensor akan terkirim ke Realtime Database firebase
 
-# Tambahan
-1 Untuk prediksi KNN, saya lakukan develop pada web hosting milik Heroku, apabila ingin mendevelop sendiri maka dapat mengikuti tutorial berikut ini https://devcenter.heroku.com/articles/heroku-cli. Jangan lupa untuk melakukan konfigurasi pada firebase dan buat aplikasi baru dalam bentuk website untuk menghubungkan algoritma knn ke Firebase Realtime database dengan cara klik project overview pada website firebase, pilih Add App dan pilih website, lalu setelah website berhasil masuk ke pengaturan web melalui tombol gerigi, lakukan scroll kebawah dan salinlah Firebase SDK ke app.py
+## Tambahan
+1. Untuk prediksi KNN, saya lakukan develop pada web hosting milik Heroku, apabila ingin mendevelop sendiri maka dapat mengikuti tutorial berikut ini https://devcenter.heroku.com/articles/heroku-cli. Jangan lupa untuk melakukan konfigurasi pada firebase dan buat aplikasi baru dalam bentuk website untuk menghubungkan algoritma knn ke Firebase Realtime database dengan cara klik project overview pada website firebase, pilih Add App dan pilih website, lalu setelah website berhasil masuk ke pengaturan web melalui tombol gerigi, lakukan scroll kebawah dan salinlah Firebase SDK ke app.py
 2. Untuk banyak data pada dataset dapat dikembangkan kembali sesuai kebutuhan
 
 Terima Kasih
